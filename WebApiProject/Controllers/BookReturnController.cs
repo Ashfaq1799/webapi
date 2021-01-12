@@ -10,12 +10,12 @@ using WebApiProject.Models;
 
 namespace WebApiProject.Controllers
 {
-
+    [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
     public class BookReturnController : ApiController
     {
         gladiatorEntities entities = new gladiatorEntities();
         [HttpPost]
-        public HttpResponseMessage addbooking(tbl_booking booking)
+        public HttpResponseMessage addreturnbooking(tbl_booking booking)
         {
             DbContextTransaction transaction = entities.Database.BeginTransaction();
             try
