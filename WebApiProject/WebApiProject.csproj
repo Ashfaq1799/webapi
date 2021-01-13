@@ -114,6 +114,7 @@
     <Compile Include="Controllers\CancelTicketController.cs" />
     <Compile Include="Controllers\FareController.cs" />
     <Compile Include="Controllers\FlightController.cs" />
+    <Compile Include="Controllers\ForgetPasswordController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\passengerController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
@@ -144,6 +145,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\NewPassword.cs" />
     <Compile Include="Models\sp_flight_search_Result.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
