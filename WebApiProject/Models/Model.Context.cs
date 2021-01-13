@@ -179,5 +179,14 @@ namespace WebApiProject.Models
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getBookingHistory_Result>("sp_getBookingHistory", usernameParameter, statusParameter);
         }
+    
+        public virtual ObjectResult<sp_getfare_Result> sp_getfare(Nullable<int> schedule_id)
+        {
+            var schedule_idParameter = schedule_id.HasValue ?
+                new ObjectParameter("schedule_id", schedule_id) :
+                new ObjectParameter("schedule_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getfare_Result>("sp_getfare", schedule_idParameter);
+        }
     }
 }

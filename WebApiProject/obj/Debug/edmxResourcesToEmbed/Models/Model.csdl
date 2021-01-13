@@ -247,6 +247,9 @@
       <Parameter Name="username" Mode="In" Type="String" />
       <Parameter Name="status" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="sp_getfare" ReturnType="Collection(gladiatorModel.sp_getfare_Result)">
+      <Parameter Name="schedule_id" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="sp_logincheck_Result">
     <Property Type="String" Name="username" Nullable="false" MaxLength="20" />
@@ -372,5 +375,11 @@
     <Property Type="String" Name="flight_name" Nullable="true" MaxLength="20" />
     <Property Type="String" Name="source_destination" Nullable="true" MaxLength="20" />
     <Property Type="String" Name="target_destination" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="sp_getfare_Result">
+    <Property Type="Decimal" Name="economy_class_fare" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="business_class_fare" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="first_class_fare" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="premium_class_fare" Nullable="true" Precision="19" />
   </ComplexType>
 </Schema>

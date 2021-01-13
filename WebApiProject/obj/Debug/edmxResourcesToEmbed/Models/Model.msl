@@ -246,5 +246,15 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getfare" FunctionName="gladiatorModel.Store.sp_getfare">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="gladiatorModel.sp_getfare_Result">
+          <ScalarProperty Name="economy_class_fare" ColumnName="economy_class_fare" />
+          <ScalarProperty Name="business_class_fare" ColumnName="business_class_fare" />
+          <ScalarProperty Name="first_class_fare" ColumnName="first_class_fare" />
+          <ScalarProperty Name="premium_class_fare" ColumnName="premium_class_fare" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>
